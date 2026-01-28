@@ -337,6 +337,23 @@
             .gradient-pink {
                 background: linear-gradient(90deg, #f24c7c, #ff7eb3);
             }
+
+            /* Remove o traço inferior padrão dos links de navegação */
+            .nav-link.btn-matricula::after {
+                display: none !important;
+            }
+
+            /* Define o comportamento de Hover específico */
+            .nav-link.btn-matricula:hover {
+                background: #3a82bf !important;
+                /* Muda fundo para azul */
+                color: white !important;
+                /* Muda texto para Branco */
+                background-image: none !important;
+                /* Remove o gradiente rosa original */
+                transform: scale(1.05);
+                /* Leve aumento de tamanho */
+            }
         </style>
 
         <div style="background: #f6b620;">
@@ -356,8 +373,12 @@
                         <a href="#" class="nav-link text-black font-medium" data-page="agendamento">Agendamento</a>
                         <a href="#" class="nav-link text-black font-medium" data-page="acesso-restrito">Acesso
                             Restrito</a>
+
+
+                        <!-- Adicionada a classe 'btn-matricula' -->
                         <a href="#"
-                            class="nav-link px-6 py-2 rounded-full gradient-pink text-white font-semibold hover:shadow-lg transition-all"
+                            class="nav-link btn-matricula px-6 py-2 rounded-full text-white font-semibold hover:shadow-lg transition-all"
+                            style="background-color: #d24d79; line-height: 1.5;"
                             data-page="matricula">Matricule-se</a>
                     </div>
 
@@ -539,264 +560,308 @@
 
 
                 <!-- Carrossel de Patrocinadores -->
-                <div class="relative w-full"> 
-    <div class="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-[#f6b620] to-transparent z-10 pointer-events-none">
-    </div>
-    <div class="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-[#f6b620] to-transparent z-10 pointer-events-none">
-    </div>
-
-    <div class="animate-scroll flex gap-10 py-12">
-        <div class="flex-shrink-0 aero-card p-4 flex items-center justify-center bg-black/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
-            <img src="./img/cbf.jpg" alt="CBF"
-                class="h-64 w-auto object-contain rounded-2xl opacity-100 group-hover:opacity-80 transition-opacity">
-        </div>
-        <div class="flex-shrink-0 aero-card p-4 flex items-center justify-center bg-black/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
-            <img src="./img/milka.jpg" alt="Milka"
-                class="h-64 w-auto object-contain rounded-2xl opacity-100 group-hover:opacity-80 transition-opacity">
-        </div>
-        <div class="flex-shrink-0 aero-card p-4 flex items-center justify-center bg-black/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
-            <img src="./img/cbf.jpg" alt="Patrocinador"
-                class="h-64 w-auto object-contain rounded-2xl opacity-100 group-hover:opacity-80 transition-opacity">
-        </div>
-        <div class="flex-shrink-0 aero-card p-4 flex items-center justify-center bg-black/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
-            <img src="./img/milka.jpg" alt="Patrocinador"
-                class="h-64 w-auto object-contain rounded-2xl opacity-100 group-hover:opacity-80 transition-opacity">
-        </div>
-        <div class="flex-shrink-0 aero-card p-4 flex items-center justify-center bg-black/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
-            <img src="./img/cbf.jpg" alt="Patrocinador"
-                class="h-64 w-auto object-contain rounded-2xl opacity-100 group-hover:opacity-80 transition-opacity">
-        </div>
-        <div class="flex-shrink-0 aero-card p-4 flex items-center justify-center bg-black/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
-            <img src="./img/milka.jpg" alt="Patrocinador"
-                class="h-64 w-auto object-contain rounded-2xl opacity-100 group-hover:opacity-80 transition-opacity">
-        </div>
-
-        <div class="flex-shrink-0 aero-card p-4 flex items-center justify-center bg-black/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
-            <img src="./img/cbf.jpg" alt="CBF"
-                class="h-64 w-auto object-contain rounded-2xl opacity-100 group-hover:opacity-80 transition-opacity">
-        </div>
-        <div class="flex-shrink-0 aero-card p-4 flex items-center justify-center bg-black/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
-            <img src="./img/milka.jpg" alt="Milka"
-                class="h-64 w-auto object-contain rounded-2xl opacity-100 group-hover:opacity-80 transition-opacity">
-        </div>
-        <div class="flex-shrink-0 aero-card p-4 flex items-center justify-center bg-black/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
-            <img src="./img/cbf.jpg" alt="Patrocinador"
-                class="h-64 w-auto object-contain rounded-2xl opacity-100 group-hover:opacity-80 transition-opacity">
-        </div>
-        <div class="flex-shrink-0 aero-card p-4 flex items-center justify-center bg-black/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
-            <img src="./img/milka.jpg" alt="Patrocinador"
-                class="h-64 w-auto object-contain rounded-2xl opacity-100 group-hover:opacity-80 transition-opacity">
-        </div>
-        <div class="flex-shrink-0 aero-card p-4 flex items-center justify-center bg-black/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
-            <img src="./img/cbf.jpg" alt="Patrocinador"
-                class="h-64 w-auto object-contain rounded-2xl opacity-100 group-hover:opacity-80 transition-opacity">
-        </div>
-        <div class="flex-shrink-0 aero-card p-4 flex items-center justify-center bg-black/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
-            <img src="./img/milka.jpg" alt="Patrocinador"
-                class="h-64 w-auto object-contain rounded-2xl opacity-100 group-hover:opacity-80 transition-opacity">
-        </div>
-    </div>
-</div>
-            <!-- Fim Carrossel de Patrocinadores -->
-
-
-            <!-- Ondulação entre a section -->
-            <div class="relative w-full overflow-hidden line-height-0 -mt-1" style="background-color: #3a82bf;">
-                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 220"
-                    preserveAspectRatio="none" class="relative block w-full h-[30px]">
-                    <path
-                        d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5,73.84-4.36,147.54,16.88,218.2,35.26,69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
-                        fill="#f6b620" opacity=".3"></path>
-
-                    <path
-                        d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.94,9.42,105,20.34,35.79,11.46,72.3,24.82,110.39,24.91,21.3,0,43.17-4.19,63.34-11,32.89-11.13,63.24-27.6,95.35-41.24,30.4-12.91,62.43-24.16,95.66-26.89,32-2.63,64,3.74,94.22,14.56,30.6,11,58.74,27.06,87.67,40.92,23.1,11.08,47,21.57,72.1,26.54V0Z"
-                        fill="#f6b620"></path>
-                </svg>
-            </div>
-            <!-- Fim Ondulação entre a section -->
-
-
-            <!-- Parceiros e Realização -->
-            <div class="py-20" style="background-color: #3a82bf;">
-    <div class="container mx-auto px-4 mb-12 text-center">
-        <h2 class="text-4xl font-bold mb-4 text-white">Parceiros e <span class="text-[#f6b620]">Realização</span></h2>
-        <p class="text-white/80 max-w-2xl mx-auto">Instituições que tornam este projeto possível.</p>
-    </div>
-
-    <div class="relative w-full overflow-hidden">
-        <div class="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[#3a82bf] to-transparent z-10 pointer-events-none"></div>
-        <div class="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-[#3a82bf] to-transparent z-10 pointer-events-none"></div>
-
-        <div class="animate-scroll flex gap-8 py-10 w-max">
-            
-            <div class="flex gap-8">
-                <div class="flex-shrink-0 aero-card p-4 flex items-center justify-center w-42 h-auto bg-white/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
-                    <img src="./img/gov.jpg" alt="Parceiro" class="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity rounded-xl">
-                </div>
-                <div class="flex-shrink-0 aero-card p-4 flex items-center justify-center w-42 h-auto bg-white/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
-                    <img src="./img/govsc.jpg" alt="Parceiro" class="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity rounded-xl">
-                </div>
-                <div class="flex-shrink-0 aero-card p-4 flex items-center justify-center w-42 h-auto bg-white/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
-                    <img src="./img/gov.jpg" alt="Parceiro" class="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity rounded-xl">
-                </div>
-                <div class="flex-shrink-0 aero-card p-4 flex items-center justify-center w-42 h-auto bg-white/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
-                    <img src="img/govsc.jpg" alt="Parceiro" class="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity rounded-xl">
-                </div>
-                <div class="flex-shrink-0 aero-card p-4 flex items-center justify-center w-42 h-auto bg-white/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
-                    <img src="./img/gov.jpg" alt="Realização" class="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity rounded-xl">
-                </div>
-                <div class="flex-shrink-0 aero-card p-4 flex items-center justify-center w-42 h-auto bg-white/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
-                    <img src="./img/govsc.jpg" alt="Realização" class="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity rounded-xl">
-                </div>
-            </div>
-
-            <div class="flex gap-8">
-                <div class="flex-shrink-0 aero-card px-4 flex items-center justify-center w-42 h-auto bg-white/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
-                    <img src="./img/gov.jpg" alt="Parceiro" class="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity rounded-xl">
-                </div>
-                <div class="flex-shrink-0 aero-card p-4 flex items-center justify-center w-42 h-auto bg-white/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
-                    <img src="./img/govsc.jpg" alt="Parceiro" class="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity rounded-xl">
-                </div>
-                <div class="flex-shrink-0 aero-card p-4 flex items-center justify-center w-42 h-auto bg-white/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
-                    <img src="./img/gov.jpg" alt="Parceiro" class="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity rounded-xl">
-                </div>
-                <div class="flex-shrink-0 aero-card p-4 flex items-center justify-center w-42 h-auto bg-white/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
-                    <img src="img/govsc.jpg" alt="Parceiro" class="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity rounded-xl">
-                </div>
-                <div class="flex-shrink-0 aero-card p-4 flex items-center justify-center w-42 h-auto bg-white/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
-                    <img src="./img/gov.jpg" alt="Realização" class="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity rounded-xl">
-                </div>
-                <div class="flex-shrink-0 aero-card p-6 flex items-center justify-center w-42 h-auto bg-white/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
-                    <img src="./img/govsc.jpg" alt="Realização" class="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity rounded-xl">
-                </div>
-            </div>
-
-        </div>
-    </div>
-</div>
-            <!-- Fim Parceiros e Realização -->
-
-
-            <!-- Ondulação entre a section -->
-            <div class="relative w-full line-height-0 z-20" style="background-color: #b95274; margin-top: -0cm;"> <svg
-                    data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 200"
-                    preserveAspectRatio="none" class="relative block w-full h-[60px]">
-                    <rect width="100%" height="100%" fill="#bb5375" />
-
-                    <path
-                        d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5,73.84-4.36,147.54,16.88,218.2,35.26,69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
-                        fill="#f8baa3" opacity=".3"></path>
-
-                    <path
-                        d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.94,9.42,105,20.34,35.79,11.46,72.3,24.82,110.39,24.91,21.3,0,43.17-4.19,63.34-11,32.89-11.13,63.24-27.6,95.35-41.24,30.4-12.91,62.43-24.16,95.66-26.89,32-2.63,64,3.74,94.22,14.56,30.6,11,58.74,27.06,87.67,40.92,23.1,11.08,47,21.57,72.1,26.54V0Z"
-                        fill="#3a82bf"></path>
-                </svg>
-            </div>
-            <!-- Fim Ondulação entre a section -->
-
-
-            <!-- Fale com Nossa Equipe -->
-            <div class="py-20 relative"
-                style="background-image: url('https://personalmarketingdigital.com.br/wp-content/uploads/2018/05/background-whatsapp-7.jpg'); background-size: cover; background-position: center;">
-                <!-- Overlay Rosa -->
-                <div class="absolute inset-0 z-10" style="background-color: rgba(210, 77, 121, 0.85);"></div>
-
-                <div class="container mx-auto px-4 relative z-10">
-                    <div class="aero-card p-12 text-center max-w-2xl mx-auto mb-12">
-                        <div class="w-20 h-20 mx-auto rounded-full bg-[#25D366] flex items-center justify-center mb-6">
-                            <i class="fab fa-whatsapp text-4xl text-white"></i>
-                        </div>
-                        <h2 class="text-4xl font-bold mb-4 text-white">Fale com <span class="text-[#f6b620]">Nossa
-                                Equipe</span></h2>
-                        <p class="text-white/90 mb-8">Tire suas dúvidas e saiba mais sobre o projeto</p>
-                        <a href="https://wa.me/+554891908442" target="_blank"
-                            class="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-[#25D366] text-white font-semibold hover:bg-[#20BA5C] hover:shadow-2xl hover:scale-105 transition-all">
-                            <i class="fab fa-whatsapp text-2xl"></i>
-                            Chamar no WhatsApp
-                        </a>
+                <div class="relative w-full">
+                    <div
+                        class="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-[#f6b620] to-transparent z-10 pointer-events-none">
                     </div>
-                </div>
-            </div>
-            <!-- Fim Fale com Nossa Equipe -->
+                    <div
+                        class="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-[#f6b620] to-transparent z-10 pointer-events-none">
+                    </div>
 
-            <!-- Ondulação entre a section -->
-            <div class="relative w-full overflow-hidden line-height-0 -mb-1 rotate-180"
-                style="background-color: #be5578;">
-                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 200"
-                    preserveAspectRatio="none" class="relative block w-full h-[30px]">
-                    <path
-                        d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5,73.84-4.36,147.54,16.88,218.2,35.26,69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
-                        fill="#f6b620" opacity=".3"></path>
+                    <div class="animate-scroll flex gap-10 py-12">
+                        <div
+                            class="flex-shrink-0 aero-card p-4 flex items-center justify-center bg-black/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
+                            <img src="./img/cbf.jpg" alt="CBF"
+                                class="h-64 w-auto object-contain rounded-2xl opacity-100 group-hover:opacity-80 transition-opacity">
+                        </div>
+                        <div
+                            class="flex-shrink-0 aero-card p-4 flex items-center justify-center bg-black/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
+                            <img src="./img/milka.jpg" alt="Milka"
+                                class="h-64 w-auto object-contain rounded-2xl opacity-100 group-hover:opacity-80 transition-opacity">
+                        </div>
+                        <div
+                            class="flex-shrink-0 aero-card p-4 flex items-center justify-center bg-black/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
+                            <img src="./img/cbf.jpg" alt="Patrocinador"
+                                class="h-64 w-auto object-contain rounded-2xl opacity-100 group-hover:opacity-80 transition-opacity">
+                        </div>
+                        <div
+                            class="flex-shrink-0 aero-card p-4 flex items-center justify-center bg-black/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
+                            <img src="./img/milka.jpg" alt="Patrocinador"
+                                class="h-64 w-auto object-contain rounded-2xl opacity-100 group-hover:opacity-80 transition-opacity">
+                        </div>
+                        <div
+                            class="flex-shrink-0 aero-card p-4 flex items-center justify-center bg-black/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
+                            <img src="./img/cbf.jpg" alt="Patrocinador"
+                                class="h-64 w-auto object-contain rounded-2xl opacity-100 group-hover:opacity-80 transition-opacity">
+                        </div>
+                        <div
+                            class="flex-shrink-0 aero-card p-4 flex items-center justify-center bg-black/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
+                            <img src="./img/milka.jpg" alt="Patrocinador"
+                                class="h-64 w-auto object-contain rounded-2xl opacity-100 group-hover:opacity-80 transition-opacity">
+                        </div>
 
-                    <path
-                        d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.94,9.42,105,20.34,35.79,11.46,72.3,24.82,110.39,24.91,21.3,0,43.17-4.19,63.34-11,32.89-11.13,63.24-27.6,95.35-41.24,30.4-12.91,62.43-24.16,95.66-26.89,32-2.63,64,3.74,94.22,14.56,30.6,11,58.74,27.06,87.67,40.92,23.1,11.08,47,21.57,72.1,26.54V0Z"
-                        fill="#f6b620"></path>
-                </svg>
-            </div>
-            <!-- Fim Ondulação entre a section -->
-
-
-            <!-- Novidades -->
-            <div class="py-20" style="background-color: #f6b620;">
-                <div class="container mx-auto px-4">
-                    <h2 class="text-4xl font-bold text-center mb-2 text-black">Novidades</h2>
-                    <h3 class="text-2xl font-semibold text-center text-[#d24d79] mb-4">Quadro de Avisos</h3>
-                    <p class="text-black/70 text-center mb-12">Fique por dentro dos próximos eventos</p>
-                    <div class="grid md:grid-cols-3 gap-8" id="news-grid">
-                        <!-- Conteúdo será carregado via JS -->
-                        <div class="col-span-3 text-center text-gray-500 py-8">
-                            <i class="fas fa-newspaper text-4xl mb-4 opacity-30"></i>
-                            <p>Nenhuma novidade no momento.</p>
+                        <div
+                            class="flex-shrink-0 aero-card p-4 flex items-center justify-center bg-black/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
+                            <img src="./img/cbf.jpg" alt="CBF"
+                                class="h-64 w-auto object-contain rounded-2xl opacity-100 group-hover:opacity-80 transition-opacity">
+                        </div>
+                        <div
+                            class="flex-shrink-0 aero-card p-4 flex items-center justify-center bg-black/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
+                            <img src="./img/milka.jpg" alt="Milka"
+                                class="h-64 w-auto object-contain rounded-2xl opacity-100 group-hover:opacity-80 transition-opacity">
+                        </div>
+                        <div
+                            class="flex-shrink-0 aero-card p-4 flex items-center justify-center bg-black/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
+                            <img src="./img/cbf.jpg" alt="Patrocinador"
+                                class="h-64 w-auto object-contain rounded-2xl opacity-100 group-hover:opacity-80 transition-opacity">
+                        </div>
+                        <div
+                            class="flex-shrink-0 aero-card p-4 flex items-center justify-center bg-black/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
+                            <img src="./img/milka.jpg" alt="Patrocinador"
+                                class="h-64 w-auto object-contain rounded-2xl opacity-100 group-hover:opacity-80 transition-opacity">
+                        </div>
+                        <div
+                            class="flex-shrink-0 aero-card p-4 flex items-center justify-center bg-black/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
+                            <img src="./img/cbf.jpg" alt="Patrocinador"
+                                class="h-64 w-auto object-contain rounded-2xl opacity-100 group-hover:opacity-80 transition-opacity">
+                        </div>
+                        <div
+                            class="flex-shrink-0 aero-card p-4 flex items-center justify-center bg-black/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
+                            <img src="./img/milka.jpg" alt="Patrocinador"
+                                class="h-64 w-auto object-contain rounded-2xl opacity-100 group-hover:opacity-80 transition-opacity">
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- Fim Novidades -->
+                <!-- Fim Carrossel de Patrocinadores -->
 
-            <!-- Ondulação entre a section -->
-            <div class="relative w-full overflow-hidden line-height-0 -mb-1 rotate-360"
-                style="background-color: #d24d79;">
-                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 200"
-                    preserveAspectRatio="none" class="relative block w-full h-[30px]">
-                    <path
-                        d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5,73.84-4.36,147.54,16.88,218.2,35.26,69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
-                        fill="#f6b620" opacity=".3"></path>
 
-                    <path
-                        d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.94,9.42,105,20.34,35.79,11.46,72.3,24.82,110.39,24.91,21.3,0,43.17-4.19,63.34-11,32.89-11.13,63.24-27.6,95.35-41.24,30.4-12.91,62.43-24.16,95.66-26.89,32-2.63,64,3.74,94.22,14.56,30.6,11,58.74,27.06,87.67,40.92,23.1,11.08,47,21.57,72.1,26.54V0Z"
-                        fill="#f6b620"></path>
-                </svg>
-            </div>
-            <!-- Fim Ondulação entre a section -->
+                <!-- Ondulação entre a section -->
+                <div class="relative w-full overflow-hidden line-height-0 -mt-1" style="background-color: #3a82bf;">
+                    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 220"
+                        preserveAspectRatio="none" class="relative block w-full h-[30px]">
+                        <path
+                            d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5,73.84-4.36,147.54,16.88,218.2,35.26,69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+                            fill="#f6b620" opacity=".3"></path>
 
-            <!-- Instagram Feed -->
-            <div class="py-20" style="background-color: #d24d79;">
-                <div class="container mx-auto px-4">
-                    <div class="text-center mb-12">
-                        <div class="inline-block p-4 rounded-full bg-white/10 mb-6">
-                            <i class="fab fa-instagram text-6xl text-white"></i>
-                        </div>
-                        <h2 class="text-4xl font-bold text-white mb-2">Siga nosso <span
-                                class="text-[#f6b620]">Instagram</span></h2>
-                        <a href="https://instagram.com/artenasescolas" target="_blank"
-                            class="text-2xl text-white/90 hover:text-white font-medium transition-all">@artenasescolas</a>
-                        <p class="text-white/70 mt-4">Acompanhe nosso dia a dia e bastidores</p>
+                        <path
+                            d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.94,9.42,105,20.34,35.79,11.46,72.3,24.82,110.39,24.91,21.3,0,43.17-4.19,63.34-11,32.89-11.13,63.24-27.6,95.35-41.24,30.4-12.91,62.43-24.16,95.66-26.89,32-2.63,64,3.74,94.22,14.56,30.6,11,58.74,27.06,87.67,40.92,23.1,11.08,47,21.57,72.1,26.54V0Z"
+                            fill="#f6b620"></path>
+                    </svg>
+                </div>
+                <!-- Fim Ondulação entre a section -->
+
+
+                <!-- Parceiros e Realização -->
+                <div class="py-20" style="background-color: #3a82bf;">
+                    <div class="container mx-auto px-4 mb-12 text-center">
+                        <h2 class="text-4xl font-bold mb-4 text-white">Parceiros e <span
+                                class="text-[#f6b620]">Realização</span></h2>
+                        <p class="text-white/80 max-w-2xl mx-auto">Instituições que tornam este projeto possível.</p>
                     </div>
 
-                    <!-- Feed Instagram Real - Elfsight Widget (tamanho feed) -->
-                    <div class="mb-12 max-w-5xl mx-auto">
+                    <div class="relative w-full overflow-hidden">
+                        <div
+                            class="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[#3a82bf] to-transparent z-10 pointer-events-none">
+                        </div>
+                        <div
+                            class="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-[#3a82bf] to-transparent z-10 pointer-events-none">
+                        </div>
 
-                        <script src="https://elfsightcdn.com/platform.js" async></script>
-                        <div class="elfsight-app-692e3a81-2b73-461b-811a-eecaf853f15c" data-elfsight-app-lazy></div>
+                        <div class="animate-scroll flex gap-8 py-10 w-max">
 
-                        <div class="text-center">
-                            <a href="https://instagram.com/artenasescolas" target="_blank"
-                                class="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-white text-[#d24d79] font-bold hover:shadow-xl hover:scale-105 transition-all text-lg">
-                                <i class="fab fa-instagram"></i> Ver Feed Completo
+                            <div class="flex gap-8">
+                                <div
+                                    class="flex-shrink-0 aero-card p-4 flex items-center justify-center w-42 h-auto bg-white/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
+                                    <img src="./img/gov.jpg" alt="Parceiro"
+                                        class="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity rounded-xl">
+                                </div>
+                                <div
+                                    class="flex-shrink-0 aero-card p-4 flex items-center justify-center w-42 h-auto bg-white/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
+                                    <img src="./img/govsc.jpg" alt="Parceiro"
+                                        class="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity rounded-xl">
+                                </div>
+                                <div
+                                    class="flex-shrink-0 aero-card p-4 flex items-center justify-center w-42 h-auto bg-white/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
+                                    <img src="./img/gov.jpg" alt="Parceiro"
+                                        class="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity rounded-xl">
+                                </div>
+                                <div
+                                    class="flex-shrink-0 aero-card p-4 flex items-center justify-center w-42 h-auto bg-white/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
+                                    <img src="img/govsc.jpg" alt="Parceiro"
+                                        class="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity rounded-xl">
+                                </div>
+                                <div
+                                    class="flex-shrink-0 aero-card p-4 flex items-center justify-center w-42 h-auto bg-white/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
+                                    <img src="./img/gov.jpg" alt="Realização"
+                                        class="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity rounded-xl">
+                                </div>
+                                <div
+                                    class="flex-shrink-0 aero-card p-4 flex items-center justify-center w-42 h-auto bg-white/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
+                                    <img src="./img/govsc.jpg" alt="Realização"
+                                        class="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity rounded-xl">
+                                </div>
+                            </div>
+
+                            <div class="flex gap-8">
+                                <div
+                                    class="flex-shrink-0 aero-card px-4 flex items-center justify-center w-42 h-auto bg-white/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
+                                    <img src="./img/gov.jpg" alt="Parceiro"
+                                        class="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity rounded-xl">
+                                </div>
+                                <div
+                                    class="flex-shrink-0 aero-card p-4 flex items-center justify-center w-42 h-auto bg-white/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
+                                    <img src="./img/govsc.jpg" alt="Parceiro"
+                                        class="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity rounded-xl">
+                                </div>
+                                <div
+                                    class="flex-shrink-0 aero-card p-4 flex items-center justify-center w-42 h-auto bg-white/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
+                                    <img src="./img/gov.jpg" alt="Parceiro"
+                                        class="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity rounded-xl">
+                                </div>
+                                <div
+                                    class="flex-shrink-0 aero-card p-4 flex items-center justify-center w-42 h-auto bg-white/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
+                                    <img src="img/govsc.jpg" alt="Parceiro"
+                                        class="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity rounded-xl">
+                                </div>
+                                <div
+                                    class="flex-shrink-0 aero-card p-4 flex items-center justify-center w-42 h-auto bg-white/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
+                                    <img src="./img/gov.jpg" alt="Realização"
+                                        class="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity rounded-xl">
+                                </div>
+                                <div
+                                    class="flex-shrink-0 aero-card p-6 flex items-center justify-center w-42 h-auto bg-white/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
+                                    <img src="./img/govsc.jpg" alt="Realização"
+                                        class="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity rounded-xl">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Fim Parceiros e Realização -->
+
+
+                <!-- Ondulação entre a section -->
+                <div class="relative w-full line-height-0 z-20" style="background-color: #b95274; margin-top: -0cm;">
+                    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 200"
+                        preserveAspectRatio="none" class="relative block w-full h-[60px]">
+                        <rect width="100%" height="100%" fill="#bb5375" />
+
+                        <path
+                            d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5,73.84-4.36,147.54,16.88,218.2,35.26,69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+                            fill="#f8baa3" opacity=".3"></path>
+
+                        <path
+                            d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.94,9.42,105,20.34,35.79,11.46,72.3,24.82,110.39,24.91,21.3,0,43.17-4.19,63.34-11,32.89-11.13,63.24-27.6,95.35-41.24,30.4-12.91,62.43-24.16,95.66-26.89,32-2.63,64,3.74,94.22,14.56,30.6,11,58.74,27.06,87.67,40.92,23.1,11.08,47,21.57,72.1,26.54V0Z"
+                            fill="#3a82bf"></path>
+                    </svg>
+                </div>
+                <!-- Fim Ondulação entre a section -->
+
+
+                <!-- Fale com Nossa Equipe -->
+                <div class="py-20 relative"
+                    style="background-image: url('https://personalmarketingdigital.com.br/wp-content/uploads/2018/05/background-whatsapp-7.jpg'); background-size: cover; background-position: center;">
+                    <!-- Overlay Rosa -->
+                    <div class="absolute inset-0 z-10" style="background-color: rgba(210, 77, 121, 0.85);"></div>
+
+                    <div class="container mx-auto px-4 relative z-10">
+                        <div class="aero-card p-12 text-center max-w-2xl mx-auto mb-12">
+                            <div
+                                class="w-20 h-20 mx-auto rounded-full bg-[#25D366] flex items-center justify-center mb-6">
+                                <i class="fab fa-whatsapp text-4xl text-white"></i>
+                            </div>
+                            <h2 class="text-4xl font-bold mb-4 text-white">Fale com <span class="text-[#f6b620]">Nossa
+                                    Equipe</span></h2>
+                            <p class="text-white/90 mb-8">Tire suas dúvidas e saiba mais sobre o projeto</p>
+                            <a href="https://wa.me/+554891908442" target="_blank"
+                                class="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-[#25D366] text-white font-semibold hover:bg-[#20BA5C] hover:shadow-2xl hover:scale-105 transition-all">
+                                <i class="fab fa-whatsapp text-2xl"></i>
+                                Chamar no WhatsApp
                             </a>
                         </div>
                     </div>
                 </div>
+                <!-- Fim Fale com Nossa Equipe -->
+
+                <!-- Ondulação entre a section -->
+                <div class="relative w-full overflow-hidden line-height-0 -mb-1 rotate-180"
+                    style="background-color: #be5578;">
+                    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 200"
+                        preserveAspectRatio="none" class="relative block w-full h-[30px]">
+                        <path
+                            d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5,73.84-4.36,147.54,16.88,218.2,35.26,69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+                            fill="#f6b620" opacity=".3"></path>
+
+                        <path
+                            d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.94,9.42,105,20.34,35.79,11.46,72.3,24.82,110.39,24.91,21.3,0,43.17-4.19,63.34-11,32.89-11.13,63.24-27.6,95.35-41.24,30.4-12.91,62.43-24.16,95.66-26.89,32-2.63,64,3.74,94.22,14.56,30.6,11,58.74,27.06,87.67,40.92,23.1,11.08,47,21.57,72.1,26.54V0Z"
+                            fill="#f6b620"></path>
+                    </svg>
+                </div>
+                <!-- Fim Ondulação entre a section -->
+
+
+                <!-- Novidades -->
+                <div class="py-20" style="background-color: #f6b620;">
+                    <div class="container mx-auto px-4">
+                        <h2 class="text-4xl font-bold text-center mb-2 text-black">Novidades</h2>
+                        <h3 class="text-2xl font-semibold text-center text-[#d24d79] mb-4">Quadro de Avisos</h3>
+                        <p class="text-black/70 text-center mb-12">Fique por dentro dos próximos eventos</p>
+                        <div class="grid md:grid-cols-3 gap-8" id="news-grid">
+                            <!-- Conteúdo será carregado via JS -->
+                            <div class="col-span-3 text-center text-gray-500 py-8">
+                                <i class="fas fa-newspaper text-4xl mb-4 opacity-30"></i>
+                                <p>Nenhuma novidade no momento.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fim Novidades -->
+
+                <!-- Ondulação entre a section -->
+                <div class="relative w-full overflow-hidden line-height-0 -mb-1 rotate-360"
+                    style="background-color: #d24d79;">
+                    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 200"
+                        preserveAspectRatio="none" class="relative block w-full h-[30px]">
+                        <path
+                            d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5,73.84-4.36,147.54,16.88,218.2,35.26,69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+                            fill="#f6b620" opacity=".3"></path>
+
+                        <path
+                            d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.94,9.42,105,20.34,35.79,11.46,72.3,24.82,110.39,24.91,21.3,0,43.17-4.19,63.34-11,32.89-11.13,63.24-27.6,95.35-41.24,30.4-12.91,62.43-24.16,95.66-26.89,32-2.63,64,3.74,94.22,14.56,30.6,11,58.74,27.06,87.67,40.92,23.1,11.08,47,21.57,72.1,26.54V0Z"
+                            fill="#f6b620"></path>
+                    </svg>
+                </div>
+                <!-- Fim Ondulação entre a section -->
+
+                <!-- Instagram Feed -->
+                <div class="py-20" style="background-color: #d24d79;">
+                    <div class="container mx-auto px-4">
+                        <div class="text-center mb-12">
+                            <div class="inline-block p-4 rounded-full bg-white/10 mb-6">
+                                <i class="fab fa-instagram text-6xl text-white"></i>
+                            </div>
+                            <h2 class="text-4xl font-bold text-white mb-2">Siga nosso <span
+                                    class="text-[#f6b620]">Instagram</span></h2>
+                            <a href="https://instagram.com/artenasescolas" target="_blank"
+                                class="text-2xl text-white/90 hover:text-white font-medium transition-all">@artenasescolas</a>
+                            <p class="text-white/70 mt-4">Acompanhe nosso dia a dia e bastidores</p>
+                        </div>
+
+                        <!-- Feed Instagram Real - Elfsight Widget (tamanho feed) -->
+                        <div class="mb-12 max-w-5xl mx-auto">
+
+                            <script src="https://elfsightcdn.com/platform.js" async></script>
+                            <div class="elfsight-app-692e3a81-2b73-461b-811a-eecaf853f15c" data-elfsight-app-lazy></div>
+
+                            <div class="text-center">
+                                <a href="https://instagram.com/artenasescolas" target="_blank"
+                                    class="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-white text-[#d24d79] font-bold hover:shadow-xl hover:scale-105 transition-all text-lg">
+                                    <i class="fab fa-instagram"></i> Ver Feed Completo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
         </section>
         <!-- Fim Instagram Feed -->
 
