@@ -28,12 +28,16 @@
             z-index: -1 !important;
         }
 
+        /* Fim esconder link Elfsight */
+
+        /* Cores Personalizadas */
         :root {
             --yellow: #f6b620;
             --pink: #d24d79;
             --blue: #3a82bf;
         }
 
+        /* Versão clara do vidro fosco */
         .glass {
             background: rgba(255, 255, 255, 0.15);
             backdrop-filter: blur(20px);
@@ -41,6 +45,7 @@
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
+        /* Versão escura do vidro fosco */
         .glass-dark {
             background: rgba(0, 0, 0, 0.2);
             backdrop-filter: blur(20px);
@@ -48,6 +53,7 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
+        /* Cartão vidro fosco */
         .glass-card {
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(15px);
@@ -56,6 +62,7 @@
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
         }
 
+        /* Fim Cores Personalizadas */
         .nav-link {
             position: relative;
             transition: all 0.3s ease;
@@ -66,6 +73,7 @@
             /* Cor padrão */
         }
 
+        /* Cores de hover específicas para cada link */
         .nav-link::after {
             content: '';
             position: absolute;
@@ -79,11 +87,13 @@
             transition: width 0.3s ease, background 0.3s ease;
         }
 
+        /* Definindo cores de hover para cada link */
         .nav-link:hover::after,
         .nav-link.active::after {
             width: 100%;
         }
 
+        /* Fim Cores de hover específicas para cada link */
         .aero-card {
             background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
             backdrop-filter: blur(10px);
@@ -93,13 +103,15 @@
             transition: all 0.4s ease;
         }
 
+        /* Efeito hover para os cartões */
         .aero-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.4);
         }
 
+        /* Fim Efeito hover para os cartões */
         .gradient-bg {
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            background: linear-gradient(135deg, #3a82bf 0%, #3a82bf 50%, #3a82bf 100%);
         }
 
         .gradient-yellow {
@@ -114,6 +126,7 @@
             background: linear-gradient(135deg, #3a82bf, #6ba3d6);
         }
 
+        /* Animação flutuar */
         @keyframes float {
 
             0%,
@@ -121,15 +134,18 @@
                 transform: translateY(0px);
             }
 
+            /* Meio da animação */
             50% {
                 transform: translateY(-20px);
             }
         }
 
+        /* Aplicando a animação */
         .float {
             animation: float 6s ease-in-out infinite;
         }
 
+        /* Fim Animação flutuar */
         .page {
             display: none;
             animation: fadeIn 0.5s ease;
@@ -139,38 +155,45 @@
             display: block;
         }
 
+        /* Animação de fade-in */
         @keyframes fadeIn {
             from {
                 opacity: 0;
                 transform: translateY(20px);
             }
 
+            /* Fim da animação */
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
 
+        /* Fim Animação de fade-in */
         .calendar-day {
             transition: all 0.3s ease;
         }
 
+        /* Efeito hover para os dias do calendário */
         .calendar-day:hover:not(.disabled) {
             background: var(--blue);
             color: white;
             transform: scale(1.1);
         }
 
+        /* Dia selecionado */
         .calendar-day.selected {
             background: var(--pink);
             color: white;
         }
 
+        /* Dia desabilitado */
         .calendar-day.disabled {
             opacity: 0.3;
             cursor: not-allowed;
         }
 
+        /* Fim Efeito hover para os dias do calendário */
         .time-slot {
             transition: all 0.3s ease;
         }
@@ -181,6 +204,7 @@
             transform: scale(1.05);
         }
 
+        /* Horário já reservado */
         .time-slot.booked {
             background: #ccc;
             color: #666;
@@ -188,17 +212,20 @@
             text-decoration: line-through;
         }
 
+        /* Horário passado */
         .time-slot.past {
             background: #eee;
             color: #999;
             cursor: not-allowed;
         }
 
+        /* Horário selecionado */
         .time-slot.selected {
             background: var(--pink);
             color: white;
         }
 
+        /* Fim Efeito hover para os horários */
         ::-webkit-scrollbar {
             width: 10px;
         }
@@ -212,15 +239,20 @@
             border-radius: 5px;
         }
 
+        /* Mobile Menu Animation */
         .mobile-menu {
             transform: translateX(100%);
             transition: transform 0.3s ease;
         }
 
+        /* Quando o menu está aberto */
         .mobile-menu.open {
             transform: translateX(0);
         }
 
+        /* Fim Mobile Menu Animation */
+
+        /* Animação das ondas no topo */
         @keyframes wavePulse {
 
             0%,
@@ -233,11 +265,13 @@
             }
         }
 
+        /* Aplicando a animação às ondas */
         .wave-1 {
             transform-origin: top;
             animation: wavePulse 5s ease-in-out infinite;
         }
 
+        /* Diferentes durações para cada onda para criar um efeito mais natural */
         .wave-2 {
             transform-origin: top;
             animation: wavePulse 4s ease-in-out infinite;
@@ -248,11 +282,13 @@
             animation: wavePulse 3s ease-in-out infinite;
         }
 
+        /* Fim Animação das ondas no topo */
         #typewriter::after {
             content: '|';
             animation: blink 0.7s infinite;
         }
 
+        /* Animação do cursor piscante */
         @keyframes blink {
 
             0%,
@@ -260,35 +296,46 @@
                 opacity: 1;
             }
 
+            /* Meio da animação */
             51%,
             100% {
                 opacity: 0;
             }
         }
 
+        /*  */
         @keyframes scroll {
-            0% {
+            from {
                 transform: translateX(0);
             }
 
-            100% {
+            /* Fim da animação */
+            to {
                 transform: translateX(-50%);
             }
         }
 
+        /* Aplicando a animação de scroll */
         .animate-scroll {
             display: flex;
             width: max-content;
+            /* Mantém os itens em linha única */
+            flex-shrink: 0;
+            /* Impede que os itens esmaguem */
             animation: scroll 30s linear infinite;
         }
 
+        /* Pausa a animação ao passar o mouse */
         .animate-scroll:hover {
             animation-play-state: paused;
         }
     </style>
 </head>
 
-<body class="gradient-bg min-h-screen text-white overflow-x-hidden">
+
+<!-- Corpo do documento -->
+
+<body class="min-h-screen text-white overflow-x-hidden">
 
     <!-- Navigation -->
     <nav class="fixed top-0 left-0 right-0 z-50">
@@ -301,12 +348,14 @@
                     transform: scaleY(1);
                 }
 
+                /* Meio da animação */
                 50% {
-                    transform: scaleY(1.7);
+                    transform: scaleY(2.1);
                     /* Controla o quanto a onda desce */
                 }
             }
 
+            /* Aplicando a animação às ondas */
             .wave-1,
             .wave-2,
             .wave-3 {
@@ -320,11 +369,13 @@
                 opacity: 0.7;
             }
 
+            /* Segunda onda com delay */
             .wave-2 {
                 animation-delay: -1.5s;
                 opacity: 0.8;
             }
 
+            /* Terceira onda com delay */
             .wave-3 {
                 animation-delay: -3.2s;
             }
@@ -334,6 +385,7 @@
                 transition: all 0.3s ease;
             }
 
+            /* Estilos específicos para o botão de matrícula */
             .gradient-pink {
                 background: linear-gradient(90deg, #f24c7c, #ff7eb3);
             }
@@ -356,13 +408,15 @@
             }
         </style>
 
+
+        <!-- Navegação Principal -->
         <div style="background: #f6b620;">
             <div class="container mx-auto px-4 py-4">
                 <div class="flex items-center justify-between">
                     <div class="flex items-center">
                         <img src="./img/logo-ane.png" alt="Arte nas Escolas" class="h-16 w-auto object-contain">
                     </div>
-
+                    <!-- Links de navegação para desktop -->
                     <div class="hidden lg:flex items-center gap-6">
                         <a href="#" class="nav-link active text-black font-medium" data-page="home">Início</a>
                         <a href="#" class="nav-link text-black font-medium" data-page="nucleos">Núcleos</a>
@@ -373,22 +427,21 @@
                         <a href="#" class="nav-link text-black font-medium" data-page="agendamento">Agendamento</a>
                         <a href="#" class="nav-link text-black font-medium" data-page="acesso-restrito">Acesso
                             Restrito</a>
-
+                        <!-- Botão de matrícula destacado -->
 
                         <!-- Adicionada a classe 'btn-matricula' -->
                         <a href="#"
                             class="nav-link btn-matricula px-6 py-2 rounded-full text-white font-semibold hover:shadow-lg transition-all"
-                            style="background-color: #d24d79; line-height: 1.5;"
-                            data-page="matricula">Matricule-se</a>
+                            style="background-color: #d24d79; line-height: 1.5;" data-page="matricula">Matricule-se</a>
                     </div>
-
+                    <!-- Botão do menu móvel -->
                     <button class="lg:hidden text-2xl text-black" onclick="toggleMobileMenu()">
                         <i class="fas fa-bars"></i>
                     </button>
                 </div>
             </div>
         </div>
-
+        <!-- Ondulação decorativa abaixo da navegação -->
         <div class="relative w-full overflow-hidden leading-none pointer-events-none" style="margin-top: -1px;">
             <svg class="relative block w-full" style="height: 120px;" viewBox="0 0 1200 250" preserveAspectRatio="none">
                 <path class="wave-1" d="M0,0 L0,50 Q150,100 300,50 T600,50 T900,50 T1200,50 L1200,0 Z" fill="#0083c3">
@@ -398,6 +451,7 @@
             </svg>
         </div>
     </nav>
+    <!-- Fim Navegação Principal -->
 
     <!-- Mobile Menu -->
     <div class="mobile-menu fixed top-0 right-0 w-80 h-full glass-dark z-50 p-6 lg:hidden">
@@ -424,12 +478,13 @@
                 onclick="toggleMobileMenu()">Matricule-se</a>
         </div>
     </div>
+    <!-- Fim Mobile Menu -->
 
     <!-- Main Content -->
     <main class="pt-28">
 
         <!-- HOME PAGE -->
-        <section id="home" class="page active min-h-screen">
+        <section id="home" class="page active min-h-screen gradient-blue">
             <!-- Hero Section -->
             <div class="relative w-full h-[80vh] overflow-hidden">
                 <div class="hero-slider absolute inset-0">
@@ -454,7 +509,7 @@
                         <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-[#1a1a2e]"></div>
                     </div>
                 </div>
-
+                <!-- Conteúdo central do Hero -->
                 <div class="absolute inset-0 flex items-center justify-center">
                     <div class="text-center max-w-4xl mx-auto px-4">
                         <h1 class="text-5xl lg:text-7xl font-bold mb-6 min-h-[80px]">
@@ -470,7 +525,7 @@
                                 <div
                                     class="gradient-pink absolute inset-0 transition-opacity duration-500 ease-in-out opacity-100 group-hover:opacity-0">
                                 </div>
-
+                                <!-- Conteúdo do botão -->
                                 <span class="relative z-10 flex items-center justify-center">
                                     <i class="fas fa-graduation-cap mr-2"></i>Matricule-Se
                                 </span>
@@ -483,6 +538,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- Fim Conteúdo central do Hero -->
 
                 <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex gap-3">
                     <button class="slider-dot w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all"
@@ -494,21 +550,11 @@
                     <button class="slider-dot w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all"
                         data-slide="3"></button>
                 </div>
-
-                <!-- Botões slide home -->
-                <button
-                    class="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/20 hover:bg-white/40 transition-all flex items-center justify-center"
-                    onclick="changeSlide(-1)">
-                    <i class="fas fa-chevron-left text-xl"></i>
-                </button>
-                <button
-                    class="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/20 hover:bg-white/40 transition-all flex items-center justify-center"
-                    onclick="changeSlide(1)">
-                    <i class="fas fa-chevron-right text-xl"></i>
-                </button>
-                <!-- Fim Botões slide home -->
+               
             </div>
+            <!-- Fim Hero Section -->
 
+            <!-- Estatísticas -->
             <div class="container mx-auto px-4 py-36">
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
                     <div class="aero-card p-6 text-center">
@@ -520,7 +566,7 @@
                         <p class="text-gray-300">Alunos</p>
                     </div>
                     <div class="aero-card p-6 text-center">
-                        <h3 class="text-4xl font-bold text-[#3a82bf]">8</h3>
+                        <h3 class="text-4xl font-bold text-[#7eafd8]">8</h3>
                         <p class="text-gray-300">Cursos</p>
                     </div>
                     <div class="aero-card p-6 text-center">
@@ -529,16 +575,17 @@
                     </div>
                 </div>
             </div>
+            <!-- Fim Estatísticas -->
 
-            <!-- Ondulação entre a section -->
+            <!-- Ondulação entre a section --> <!-- Onda "Nossos Patrocinadores & Home" -->
             <div class="relative w-full overflow-hidden line-height-0 -mb-1 rotate-180"
-                style="background-color: #191d35;">
+                style="background-color: #3a82bf;">
                 <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 220"
                     preserveAspectRatio="none" class="relative block w-full h-[30px]">
                     <path
                         d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5,73.84-4.36,147.54,16.88,218.2,35.26,69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
                         fill="#f6b620" opacity=".3"></path>
-
+                    <!-- Segunda camada da ondulação -->
                     <path
                         d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.94,9.42,105,20.34,35.79,11.46,72.3,24.82,110.39,24.91,21.3,0,43.17-4.19,63.34-11,32.89-11.13,63.24-27.6,95.35-41.24,30.4-12.91,62.43-24.16,95.66-26.89,32-2.63,64,3.74,94.22,14.56,30.6,11,58.74,27.06,87.67,40.92,23.1,11.08,47,21.57,72.1,26.54V0Z"
                         fill="#f6b620"></path>
@@ -560,6 +607,81 @@
 
 
                 <!-- Carrossel de Patrocinadores -->
+                <!-- Carrossel de Patrocinadores - RTL (direção oposta) -->
+                <div class="relative w-full mt-10 overflow-hidden">
+                    <div
+                        class="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-[#f6b620] to-transparent z-10 pointer-events-none">
+                    </div>
+                    <div
+                        class="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-[#f6b620] to-transparent z-10 pointer-events-none">
+                    </div>
+
+                    <div class="animate-scroll rtl flex gap-10 py-12" style="animation-direction: reverse;">
+                        <div
+                            class="flex-shrink-0 aero-card p-4 flex items-center justify-center bg-black/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
+                            <img src="./img/cbf.jpg" alt="CBF"
+                                class="h-64 w-auto object-contain rounded-2xl opacity-100 group-hover:opacity-80 transition-opacity">
+                        </div>
+                        <div
+                            class="flex-shrink-0 aero-card p-4 flex items-center justify-center bg-black/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
+                            <img src="./img/milka.jpg" alt="Milka"
+                                class="h-64 w-auto object-contain rounded-2xl opacity-100 group-hover:opacity-80 transition-opacity">
+                        </div>
+                        <div
+                            class="flex-shrink-0 aero-card p-4 flex items-center justify-center bg-black/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
+                            <img src="./img/cbf.jpg" alt="Patrocinador"
+                                class="h-64 w-auto object-contain rounded-2xl opacity-100 group-hover:opacity-80 transition-opacity">
+                        </div>
+                        <div
+                            class="flex-shrink-0 aero-card p-4 flex items-center justify-center bg-black/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
+                            <img src="./img/milka.jpg" alt="Patrocinador"
+                                class="h-64 w-auto object-contain rounded-2xl opacity-100 group-hover:opacity-80 transition-opacity">
+                        </div>
+                        <div
+                            class="flex-shrink-0 aero-card p-4 flex items-center justify-center bg-black/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
+                            <img src="./img/cbf.jpg" alt="Patrocinador"
+                                class="h-64 w-auto object-contain rounded-2xl opacity-100 group-hover:opacity-80 transition-opacity">
+                        </div>
+                        <div
+                            class="flex-shrink-0 aero-card p-4 flex items-center justify-center bg-black/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
+                            <img src="./img/milka.jpg" alt="Patrocinador"
+                                class="h-64 w-auto object-contain rounded-2xl opacity-100 group-hover:opacity-80 transition-opacity">
+                        </div>
+
+                        <div
+                            class="flex-shrink-0 aero-card p-4 flex items-center justify-center bg-black/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
+                            <img src="./img/cbf.jpg" alt="CBF"
+                                class="h-64 w-auto object-contain rounded-2xl opacity-100 group-hover:opacity-80 transition-opacity">
+                        </div>
+                        <div
+                            class="flex-shrink-0 aero-card p-4 flex items-center justify-center bg-black/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
+                            <img src="./img/milka.jpg" alt="Milka"
+                                class="h-64 w-auto object-contain rounded-2xl opacity-100 group-hover:opacity-80 transition-opacity">
+                        </div>
+                        <div
+                            class="flex-shrink-0 aero-card p-4 flex items-center justify-center bg-black/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
+                            <img src="./img/cbf.jpg" alt="Patrocinador"
+                                class="h-64 w-auto object-contain rounded-2xl opacity-100 group-hover:opacity-80 transition-opacity">
+                        </div>
+                        <div
+                            class="flex-shrink-0 aero-card p-4 flex items-center justify-center bg-black/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
+                            <img src="./img/milka.jpg" alt="Patrocinador"
+                                class="h-64 w-auto object-contain rounded-2xl opacity-100 group-hover:opacity-80 transition-opacity">
+                        </div>
+                        <div
+                            class="flex-shrink-0 aero-card p-4 flex items-center justify-center bg-black/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
+                            <img src="./img/cbf.jpg" alt="Patrocinador"
+                                class="h-64 w-auto object-contain rounded-2xl opacity-100 group-hover:opacity-80 transition-opacity">
+                        </div>
+                        <div
+                            class="flex-shrink-0 aero-card p-4 flex items-center justify-center bg-black/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
+                            <img src="./img/milka.jpg" alt="Patrocinador"
+                                class="h-64 w-auto object-contain rounded-2xl opacity-100 group-hover:opacity-80 transition-opacity">
+                        </div>
+                    </div>
+                </div>
+
+                <!--Sentido não reverse
                 <div class="relative w-full">
                     <div
                         class="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-[#f6b620] to-transparent z-10 pointer-events-none">
@@ -632,6 +754,7 @@
                         </div>
                     </div>
                 </div>
+                -->
                 <!-- Fim Carrossel de Patrocinadores -->
 
 
@@ -669,72 +792,129 @@
 
                         <div class="animate-scroll flex gap-8 py-10 w-max">
 
-                            <div class="flex gap-8">
-                                <div
-                                    class="flex-shrink-0 aero-card p-4 flex items-center justify-center w-42 h-auto bg-white/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
-                                    <img src="./img/gov.jpg" alt="Parceiro"
-                                        class="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity rounded-xl">
-                                </div>
-                                <div
-                                    class="flex-shrink-0 aero-card p-4 flex items-center justify-center w-42 h-auto bg-white/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
-                                    <img src="./img/govsc.jpg" alt="Parceiro"
-                                        class="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity rounded-xl">
-                                </div>
-                                <div
-                                    class="flex-shrink-0 aero-card p-4 flex items-center justify-center w-42 h-auto bg-white/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
-                                    <img src="./img/gov.jpg" alt="Parceiro"
-                                        class="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity rounded-xl">
-                                </div>
-                                <div
-                                    class="flex-shrink-0 aero-card p-4 flex items-center justify-center w-42 h-auto bg-white/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
-                                    <img src="img/govsc.jpg" alt="Parceiro"
-                                        class="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity rounded-xl">
-                                </div>
-                                <div
-                                    class="flex-shrink-0 aero-card p-4 flex items-center justify-center w-42 h-auto bg-white/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
-                                    <img src="./img/gov.jpg" alt="Realização"
-                                        class="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity rounded-xl">
-                                </div>
-                                <div
-                                    class="flex-shrink-0 aero-card p-4 flex items-center justify-center w-42 h-auto bg-white/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
-                                    <img src="./img/govsc.jpg" alt="Realização"
-                                        class="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity rounded-xl">
-                                </div>
+                            <div
+                                class="flex-shrink-0 aero-card p-4 flex items-center justify-center w-42 h-42 bg-white/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
+                                <img src="./img/gov.jpg" alt="Parceiro"
+                                    class="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity rounded-xl">
+                            </div>
+                            <div
+                                class="flex-shrink-0 aero-card p-4 flex items-center justify-center w-42 h-42 bg-white/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
+                                <img src="./img/govsc.jpg" alt="Parceiro"
+                                    class="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity rounded-xl">
+                            </div>
+                            <div
+                                class="flex-shrink-0 aero-card p-4 flex items-center justify-center w-42 h-42 bg-white/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
+                                <img src="./img/gov.jpg" alt="Parceiro"
+                                    class="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity rounded-xl">
+                            </div>
+                            <div
+                                class="flex-shrink-0 aero-card p-4 flex items-center justify-center w-42 h-42 bg-white/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
+                                <img src="./img/govsc.jpg" alt="Parceiro"
+                                    class="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity rounded-xl">
+                            </div>
+                            <div
+                                class="flex-shrink-0 aero-card p-4 flex items-center justify-center w-42 h-42 bg-white/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
+                                <img src="./img/gov.jpg" alt="Realização"
+                                    class="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity rounded-xl">
+                            </div>
+                            <div
+                                class="flex-shrink-0 aero-card p-4 flex items-center justify-center w-42 h-42 bg-white/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
+                                <img src="./img/govsc.jpg" alt="Realização"
+                                    class="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity rounded-xl">
                             </div>
 
-                            <div class="flex gap-8">
-                                <div
-                                    class="flex-shrink-0 aero-card px-4 flex items-center justify-center w-42 h-auto bg-white/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
-                                    <img src="./img/gov.jpg" alt="Parceiro"
-                                        class="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity rounded-xl">
-                                </div>
-                                <div
-                                    class="flex-shrink-0 aero-card p-4 flex items-center justify-center w-42 h-auto bg-white/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
-                                    <img src="./img/govsc.jpg" alt="Parceiro"
-                                        class="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity rounded-xl">
-                                </div>
-                                <div
-                                    class="flex-shrink-0 aero-card p-4 flex items-center justify-center w-42 h-auto bg-white/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
-                                    <img src="./img/gov.jpg" alt="Parceiro"
-                                        class="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity rounded-xl">
-                                </div>
-                                <div
-                                    class="flex-shrink-0 aero-card p-4 flex items-center justify-center w-42 h-auto bg-white/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
-                                    <img src="img/govsc.jpg" alt="Parceiro"
-                                        class="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity rounded-xl">
-                                </div>
-                                <div
-                                    class="flex-shrink-0 aero-card p-4 flex items-center justify-center w-42 h-auto bg-white/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
-                                    <img src="./img/gov.jpg" alt="Realização"
-                                        class="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity rounded-xl">
-                                </div>
-                                <div
-                                    class="flex-shrink-0 aero-card p-6 flex items-center justify-center w-42 h-auto bg-white/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
-                                    <img src="./img/govsc.jpg" alt="Realização"
-                                        class="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity rounded-xl">
-                                </div>
+                            <div
+                                class="flex-shrink-0 aero-card p-4 flex items-center justify-center w-42 h-42 bg-white/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
+                                <img src="./img/gov.jpg" alt="Parceiro"
+                                    class="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity rounded-xl">
+                            </div>
+                            <div
+                                class="flex-shrink-0 aero-card p-4 flex items-center justify-center w-42 h-42 bg-white/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
+                                <img src="./img/govsc.jpg" alt="Parceiro"
+                                    class="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity rounded-xl">
+                            </div>
+                            <div
+                                class="flex-shrink-0 aero-card p-4 flex items-center justify-center w-42 h-42 bg-white/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
+                                <img src="./img/gov.jpg" alt="Parceiro"
+                                    class="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity rounded-xl">
+                            </div>
+                            <div
+                                class="flex-shrink-0 aero-card p-4 flex items-center justify-center w-42 h-42 bg-white/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
+                                <img src="./img/govsc.jpg" alt="Parceiro"
+                                    class="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity rounded-xl">
+                            </div>
+                            <div
+                                class="flex-shrink-0 aero-card p-4 flex items-center justify-center w-42 h-42 bg-white/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
+                                <img src="./img/gov.jpg" alt="Realização"
+                                    class="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity rounded-xl">
+                            </div>
+                            <div
+                                class="flex-shrink-0 aero-card p-4 flex items-center justify-center w-42 h-42 bg-white/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
+                                <img src="./img/govsc.jpg" alt="Realização"
+                                    class="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity rounded-xl">
                             </div>
 
+                            <div
+                                class="flex-shrink-0 aero-card p-4 flex items-center justify-center w-42 h-42 bg-white/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
+                                <img src="./img/gov.jpg" alt="Parceiro"
+                                    class="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity rounded-xl">
+                            </div>
+                            <div
+                                class="flex-shrink-0 aero-card p-4 flex items-center justify-center w-42 h-42 bg-white/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
+                                <img src="./img/govsc.jpg" alt="Parceiro"
+                                    class="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity rounded-xl">
+                            </div>
+                            <div
+                                class="flex-shrink-0 aero-card p-4 flex items-center justify-center w-42 h-42 bg-white/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
+                                <img src="./img/gov.jpg" alt="Parceiro"
+                                    class="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity rounded-xl">
+                            </div>
+                            <div
+                                class="flex-shrink-0 aero-card p-4 flex items-center justify-center w-42 h-42 bg-white/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
+                                <img src="./img/govsc.jpg" alt="Parceiro"
+                                    class="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity rounded-xl">
+                            </div>
+                            <div
+                                class="flex-shrink-0 aero-card p-4 flex items-center justify-center w-42 h-42 bg-white/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
+                                <img src="./img/gov.jpg" alt="Realização"
+                                    class="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity rounded-xl">
+                            </div>
+                            <div
+                                class="flex-shrink-0 aero-card p-4 flex items-center justify-center w-42 h-42 bg-white/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
+                                <img src="./img/govsc.jpg" alt="Realização"
+                                    class="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity rounded-xl">
+                            </div>
+
+                            <div
+                                class="flex-shrink-0 aero-card p-4 flex items-center justify-center w-42 h-42 bg-white/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
+                                <img src="./img/gov.jpg" alt="Parceiro"
+                                    class="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity rounded-xl">
+                            </div>
+                            <div
+                                class="flex-shrink-0 aero-card p-4 flex items-center justify-center w-42 h-42 bg-white/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
+                                <img src="./img/govsc.jpg" alt="Parceiro"
+                                    class="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity rounded-xl">
+                            </div>
+                            <div
+                                class="flex-shrink-0 aero-card p-4 flex items-center justify-center w-42 h-42 bg-white/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
+                                <img src="./img/gov.jpg" alt="Parceiro"
+                                    class="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity rounded-xl">
+                            </div>
+                            <div
+                                class="flex-shrink-0 aero-card p-4 flex items-center justify-center w-42 h-42 bg-white/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
+                                <img src="./img/govsc.jpg" alt="Parceiro"
+                                    class="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity rounded-xl">
+                            </div>
+                            <div
+                                class="flex-shrink-0 aero-card p-4 flex items-center justify-center w-42 h-42 bg-white/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
+                                <img src="./img/gov.jpg" alt="Realização"
+                                    class="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity rounded-xl">
+                            </div>
+                            <div
+                                class="flex-shrink-0 aero-card p-4 flex items-center justify-center w-42 h-42 bg-white/10 group rounded-2xl hover:border-white/50 relative hover:z-20 transition-all">
+                                <img src="./img/govsc.jpg" alt="Realização"
+                                    class="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity rounded-xl">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -867,7 +1047,7 @@
 
 
         <!-- NÚCLEOS PAGE -->
-        <section id="nucleos" class="page min-h-screen">
+        <section id="nucleos" class="page active min-h-screen bg-[#f24c7c]">
             <div class="container mx-auto px-4 py-36">
                 <h1 class="text-5xl font-bold text-center mb-4">Nossos <span class="text-[#f6b620]">Núcleos</span></h1>
                 <p class="text-xl text-gray-300 text-center mb-12">10 núcleos espalhados pela cidade, levando arte para
@@ -880,19 +1060,23 @@
                                 alt="Núcleo Centro"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                         </div>
+
+                        <!--Cores Nossos Núcleos-->
                         <div class="p-6">
-                            <h3 class="text-xl font-bold text-[#f6b620] mb-2">Núcleo Centro</h3>
-                            <p class="text-gray-400 mb-4"><i class="fas fa-map-marker-alt text-[#d24d79] mr-2"></i>Rua
+                            <h3 class="text-xl font-bold text-[#f6b620] mb-2">Núcleo Florianópolis/SC</h3>
+                            <p class="text-white-900 mb-4"><i class="fas fa-map-marker-alt text-[#f6b620] mr-2"></i>Rua
                                 Principal, 123</p>
                             <div class="flex flex-wrap gap-2">
-                                <span class="px-3 py-1 rounded-full text-xs bg-[#f6b620]/20 text-[#f6b620]">Piano</span>
+                                <span class="px-3 py-1 rounded-full text-xs bg-[#272727]/20 text-[#f6b620]">Piano</span>
                                 <span
-                                    class="px-3 py-1 rounded-full text-xs bg-[#d24d79]/20 text-[#d24d79]">Violão</span>
+                                    class="px-3 py-1 rounded-full text-xs bg-[#272727]/20 text-[#f6b620]">Violão</span>
                                 <span
-                                    class="px-3 py-1 rounded-full text-xs bg-[#3a82bf]/20 text-[#3a82bf]">Teatro</span>
+                                    class="px-3 py-1 rounded-full text-xs bg-[#272727]/20 text-[#f6b620]">Teatro</span>
                             </div>
                         </div>
                     </div>
+
+                    <!--Cores Nossos Núcleos-->
                     <div class="aero-card overflow-hidden group">
                         <div class="h-48 overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=200&fit=crop"
@@ -900,16 +1084,18 @@
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                         </div>
                         <div class="p-6">
-                            <h3 class="text-xl font-bold text-[#f6b620] mb-2">Núcleo Norte</h3>
-                            <p class="text-gray-400 mb-4"><i class="fas fa-map-marker-alt text-[#d24d79] mr-2"></i>Av.
+                            <h3 class="text-xl font-bold text-[#f6b620] mb-2">Núcleo São José/SC</h3>
+                            <p class="text-white-900 mb-4"><i class="fas fa-map-marker-alt text-[#f6b620] mr-2"></i>Av.
                                 Norte, 456</p>
                             <div class="flex flex-wrap gap-2">
                                 <span
-                                    class="px-3 py-1 rounded-full text-xs bg-[#f6b620]/20 text-[#f6b620]">Violino</span>
-                                <span class="px-3 py-1 rounded-full text-xs bg-[#d24d79]/20 text-[#d24d79]">Canto</span>
+                                    class="px-3 py-1 rounded-full text-xs bg-[#272727]/20 text-[#f6b620]">Violino</span>
+                                <span class="px-3 py-1 rounded-full text-xs bg-[#272727]/20 text-[#f6b620]">Canto</span>
                             </div>
                         </div>
                     </div>
+                    <!--Cores Nossos Núcleos-->
+
                     <div class="aero-card overflow-hidden group">
                         <div class="h-48 overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=400&h=200&fit=crop"
@@ -917,16 +1103,17 @@
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                         </div>
                         <div class="p-6">
-                            <h3 class="text-xl font-bold text-[#f6b620] mb-2">Núcleo Sul</h3>
-                            <p class="text-gray-400 mb-4"><i class="fas fa-map-marker-alt text-[#d24d79] mr-2"></i>Rua
+                            <h3 class="text-xl font-bold text-[#f6b620] mb-2">Núcleo Irecê/BA</h3>
+                            <p class="text-white-900 mb-4"><i class="fas fa-map-marker-alt text-[#f6b620] mr-2"></i>Rua
                                 do Sol, 789</p>
                             <div class="flex flex-wrap gap-2">
                                 <span
-                                    class="px-3 py-1 rounded-full text-xs bg-[#3a82bf]/20 text-[#3a82bf]">Teoria</span>
-                                <span class="px-3 py-1 rounded-full text-xs bg-[#f6b620]/20 text-[#f6b620]">Piano</span>
+                                    class="px-3 py-1 rounded-full text-xs bg-[#272727]/20 text-[#f6b620]">Teoria</span>
+                                <span class="px-3 py-1 rounded-full text-xs bg-[#272727]/20 text-[#f6b620]">Piano</span>
                             </div>
                         </div>
                     </div>
+                    <!--Cores Nossos Núcleos-->
                     <div class="aero-card overflow-hidden group">
                         <div class="h-48 overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=400&h=200&fit=crop"
@@ -934,17 +1121,18 @@
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                         </div>
                         <div class="p-6">
-                            <h3 class="text-xl font-bold text-[#f6b620] mb-2">Núcleo Leste</h3>
-                            <p class="text-gray-400 mb-4"><i class="fas fa-map-marker-alt text-[#d24d79] mr-2"></i>Av.
+                            <h3 class="text-xl font-bold text-[#f6b620] mb-2">Núcleo São Miguel Paulista/SP</h3>
+                            <p class="text-white-900 mb-4"><i class="fas fa-map-marker-alt text-[#f6b620] mr-2"></i>Av.
                                 Leste, 321</p>
                             <div class="flex flex-wrap gap-2">
                                 <span
-                                    class="px-3 py-1 rounded-full text-xs bg-[#d24d79]/20 text-[#d24d79]">Violão</span>
+                                    class="px-3 py-1 rounded-full text-xs bg-[#272727]/20 text-[#f6b620]">Violão</span>
                                 <span
-                                    class="px-3 py-1 rounded-full text-xs bg-[#3a82bf]/20 text-[#3a82bf]">Teatro</span>
+                                    class="px-3 py-1 rounded-full text-xs bg-[#272727]/20 text-[#f6b620]">Teatro</span>
                             </div>
                         </div>
                     </div>
+                    <!--Cores Nossos Núcleos-->
                     <div class="aero-card overflow-hidden group">
                         <div class="h-48 overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?w=400&h=200&fit=crop"
@@ -953,15 +1141,17 @@
                         </div>
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-[#f6b620] mb-2">Núcleo Oeste</h3>
-                            <p class="text-gray-400 mb-4"><i class="fas fa-map-marker-alt text-[#d24d79] mr-2"></i>Rua
+                            <p class="text-white-900 mb-4"><i class="fas fa-map-marker-alt text-[#f6b620] mr-2"></i>Rua
                                 Oeste, 654</p>
                             <div class="flex flex-wrap gap-2">
                                 <span
-                                    class="px-3 py-1 rounded-full text-xs bg-[#f6b620]/20 text-[#f6b620]">Violino</span>
-                                <span class="px-3 py-1 rounded-full text-xs bg-[#d24d79]/20 text-[#d24d79]">Viola</span>
+                                    class="px-3 py-1 rounded-full text-xs bg-[#272727]/20 text-[#f6b620]">Violino</span>
+                                <span class="px-3 py-1 rounded-full text-xs bg-[#272727]/20 text-[#f6b620]">Viola</span>
                             </div>
                         </div>
                     </div>
+                    <!--Cores Nossos Núcleos-->
+
                     <div class="aero-card overflow-hidden group">
                         <div class="h-48 overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=400&h=200&fit=crop"
@@ -970,15 +1160,17 @@
                         </div>
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-[#f6b620] mb-2">Núcleo Jardim</h3>
-                            <p class="text-gray-400 mb-4"><i class="fas fa-map-marker-alt text-[#d24d79] mr-2"></i>Rua
+                            <p class="text-white-900 mb-4"><i class="fas fa-map-marker-alt text-[#f6b620] mr-2"></i>Rua
                                 das Flores, 987</p>
                             <div class="flex flex-wrap gap-2">
                                 <span
-                                    class="px-3 py-1 rounded-full text-xs bg-[#3a82bf]/20 text-[#3a82bf]">Flauta</span>
-                                <span class="px-3 py-1 rounded-full text-xs bg-[#f6b620]/20 text-[#f6b620]">Canto</span>
+                                    class="px-3 py-1 rounded-full text-xs bg-[#272727]/20 text-[#f6b620]">Flauta</span>
+                                <span class="px-3 py-1 rounded-full text-xs bg-[#272727]/20 text-[#f6b620]">Canto</span>
                             </div>
                         </div>
                     </div>
+                    <!--Cores Nossos Núcleos-->
+
                     <div class="aero-card overflow-hidden group">
                         <div class="h-48 overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1465847899084-d164df4dedc6?w=400&h=200&fit=crop"
@@ -987,15 +1179,17 @@
                         </div>
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-[#f6b620] mb-2">Núcleo Vila</h3>
-                            <p class="text-gray-400 mb-4"><i class="fas fa-map-marker-alt text-[#d24d79] mr-2"></i>Av.
+                            <p class="text-white-900 mb-4"><i class="fas fa-map-marker-alt text-[#f6b620] mr-2"></i>Av.
                                 Vila Nova, 147</p>
                             <div class="flex flex-wrap gap-2">
                                 <span
-                                    class="px-3 py-1 rounded-full text-xs bg-[#d24d79]/20 text-[#d24d79]">Teatro</span>
-                                <span class="px-3 py-1 rounded-full text-xs bg-[#3a82bf]/20 text-[#3a82bf]">Dança</span>
+                                    class="px-3 py-1 rounded-full text-xs bg-[#272727]/20 text-[#f6b620]">Teatro</span>
+                                <span class="px-3 py-1 rounded-full text-xs bg-[#272727]/20 text-[#f6b620]">Dança</span>
                             </div>
                         </div>
                     </div>
+                    <!--Cores Nossos Núcleos-->
+
                     <div class="aero-card overflow-hidden group">
                         <div class="h-48 overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=200&fit=crop"
@@ -1004,15 +1198,17 @@
                         </div>
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-[#f6b620] mb-2">Núcleo Parque</h3>
-                            <p class="text-gray-400 mb-4"><i class="fas fa-map-marker-alt text-[#d24d79] mr-2"></i>Rua
+                            <p class="text-white-900 mb-4"><i class="fas fa-map-marker-alt text-[#f6b620] mr-2"></i>Rua
                                 do Parque, 258</p>
                             <div class="flex flex-wrap gap-2">
                                 <span
-                                    class="px-3 py-1 rounded-full text-xs bg-[#f6b620]/20 text-[#f6b620]">Infantil</span>
-                                <span class="px-3 py-1 rounded-full text-xs bg-[#d24d79]/20 text-[#d24d79]">Piano</span>
+                                    class="px-3 py-1 rounded-full text-xs bg-[#272727]/20 text-[#f6b620]">Infantil</span>
+                                <span class="px-3 py-1 rounded-full text-xs bg-[#272727]/20 text-[#f6b620]">Piano</span>
                             </div>
                         </div>
                     </div>
+                    <!--Cores Nossos Núcleos-->
+
                     <div class="aero-card overflow-hidden group">
                         <div class="h-48 overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=400&h=200&fit=crop"
@@ -1021,15 +1217,17 @@
                         </div>
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-[#f6b620] mb-2">Núcleo Industrial</h3>
-                            <p class="text-gray-400 mb-4"><i class="fas fa-map-marker-alt text-[#d24d79] mr-2"></i>Av.
+                            <p class="text-white-900 mb-4"><i class="fas fa-map-marker-alt text-[#f6b620] mr-2"></i>Av.
                                 Industrial, 369</p>
                             <div class="flex flex-wrap gap-2">
-                                <span class="px-3 py-1 rounded-full text-xs bg-[#3a82bf]/20 text-[#3a82bf]">Banda</span>
+                                <span class="px-3 py-1 rounded-full text-xs bg-[#272727]/20 text-[#f6b620]">Banda</span>
                                 <span
-                                    class="px-3 py-1 rounded-full text-xs bg-[#f6b620]/20 text-[#f6b620]">Percussão</span>
+                                    class="px-3 py-1 rounded-full text-xs bg-[#272727]/20 text-[#f6b620]">Percussão</span>
                             </div>
                         </div>
                     </div>
+                    <!--Cores Nossos Núcleos-->
+
                     <div class="aero-card overflow-hidden group lg:col-span-3 md:col-span-2">
                         <div class="flex flex-col md:flex-row">
                             <div class="h-48 md:h-auto md:w-1/2 overflow-hidden">
@@ -1037,20 +1235,21 @@
                                     alt="Núcleo Sede"
                                     class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                             </div>
+
                             <div class="p-8 md:w-1/2">
                                 <h3 class="text-2xl font-bold text-[#f6b620] mb-4">Núcleo Sede - Matriz</h3>
-                                <p class="text-gray-400 mb-4"><i
-                                        class="fas fa-map-marker-alt text-[#d24d79] mr-2"></i>Av. Cultural, 1000 -
+                                <p class="text-white-900 mb-4"><i
+                                        class="fas fa-map-marker-alt text-[#f6b620] mr-2"></i>Av. Cultural, 1000 -
                                     Centro Histórico</p>
                                 <p class="text-gray-300 mb-6">Nosso maior núcleo, com auditório para 500 pessoas,
                                     estúdio de gravação e biblioteca.</p>
                                 <div class="flex flex-wrap gap-2">
-                                    <span class="px-3 py-1 rounded-full text-xs bg-[#f6b620]/20 text-[#f6b620]">Todos os
+                                    <span class="px-3 py-1 rounded-full text-xs bg-[#272727]/20 text-[#f6b620]">Todos os
                                         Cursos</span>
                                     <span
-                                        class="px-3 py-1 rounded-full text-xs bg-[#d24d79]/20 text-[#d24d79]">Auditório</span>
+                                        class="px-3 py-1 rounded-full text-xs bg-[#272727]/20 text-[#f6b620]">Auditório</span>
                                     <span
-                                        class="px-3 py-1 rounded-full text-xs bg-[#3a82bf]/20 text-[#3a82bf]">Estúdio</span>
+                                        class="px-3 py-1 rounded-full text-xs bg-[#272727]/20 text-[#f6b620]">Estúdio</span>
                                 </div>
                             </div>
                         </div>
@@ -1062,10 +1261,10 @@
 
 
         <!-- QUEM SOMOS PAGE -->
-        <section id="quem-somos" class="page min-h-screen">
+        <section id="quem-somos" class="page active min-h-screen bg-[#0174ad]">
             <div class="container mx-auto px-4 py-36">
-                <h1 class="text-5xl font-bold text-center mb-4">Quem <span class="text-[#d24d79]">Somos</span></h1>
-                <p class="text-xl text-gray-300 text-center mb-16">Há 15 anos transformando vidas através da arte.</p>
+                <h1 class="text-5xl font-bold text-center mb-4">Quem <span class="text-[#f6b620]">Somos</span></h1>
+                <p class="text-xl text-gray-300 text-center mb-16">Há 215 anos transformando vidas através da arte.</p>
 
                 <div class="grid lg:grid-cols-2 gap-12 items-center mb-20">
                     <div class="aero-card p-8">
@@ -1081,68 +1280,71 @@
                         <img src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=600&h=400&fit=crop"
                             alt="Nossa equipe" class="w-full rounded-3xl">
                         <div class="absolute -bottom-8 -left-8 w-48 h-48 gradient-pink rounded-3xl p-6 glass-card">
-                            <p class="text-4xl font-bold">15+</p>
+                            <p class="text-4xl font-bold">215+</p>
                             <p class="text-lg">Anos de Experiência</p>
                         </div>
                     </div>
                 </div>
 
+                <!-- Missão, Visão e Valores -->
                 <div class="grid md:grid-cols-3 gap-8 mb-20">
                     <div class="aero-card p-8 text-center">
                         <div
                             class="w-20 h-20 mx-auto rounded-full gradient-yellow flex items-center justify-center mb-6">
                             <i class="fas fa-bullseye text-3xl text-black"></i>
                         </div>
-                        <h3 class="text-2xl font-bold mb-4">Missão</h3>
+                        <h3 class="text-2xl font-bold mb-4">Método Suzuki</h3>
                         <p class="text-gray-300">Democratizar o acesso à educação artística e cultural.</p>
                     </div>
                     <div class="aero-card p-8 text-center">
                         <div class="w-20 h-20 mx-auto rounded-full gradient-pink flex items-center justify-center mb-6">
                             <i class="fas fa-eye text-3xl text-white"></i>
                         </div>
-                        <h3 class="text-2xl font-bold mb-4">Visão</h3>
+                        <h3 class="text-2xl font-bold mb-4">Visão Suzuki</h3>
                         <p class="text-gray-300">Ser referência nacional em educação artística.</p>
                     </div>
                     <div class="aero-card p-8 text-center">
                         <div class="w-20 h-20 mx-auto rounded-full gradient-blue flex items-center justify-center mb-6">
                             <i class="fas fa-heart text-3xl text-white"></i>
                         </div>
-                        <h3 class="text-2xl font-bold mb-4">Valores</h3>
+                        <h3 class="text-2xl font-bold mb-4">Valores Suzuki</h3>
                         <p class="text-gray-300">Inclusão, excelência, criatividade e respeito.</p>
                     </div>
                 </div>
+                <!-- Fim Missão, Visão e Valores -->
 
-                <h2 class="text-4xl font-bold text-center mb-12">Nossa <span class="text-[#3a82bf]">Equipe</span></h2>
+                <!-- Equipe -->
+                <h2 class="text-4xl font-bold text-center mb-12">Nossos <span class="text-[#f6b620]">Professores</span></h2>
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
                     <div class="aero-card p-6 text-center">
                         <div class="w-24 h-24 mx-auto rounded-full overflow-hidden mb-4 border-4 border-[#f6b620]">
                             <img src="https://i.pravatar.cc/150?img=1" alt="Diretor" class="w-full h-full object-cover">
                         </div>
-                        <h4 class="font-semibold">Carlos Silva</h4>
-                        <p class="text-sm text-[#f6b620]">Diretor Geral</p>
+                        <h4 class="font-semibold">Julian Tainã</h4>
+                        <p class="text-sm text-[#f6b620]">Chefão</p>
                     </div>
                     <div class="aero-card p-6 text-center">
                         <div class="w-24 h-24 mx-auto rounded-full overflow-hidden mb-4 border-4 border-[#d24d79]">
                             <img src="https://i.pravatar.cc/150?img=5" alt="Coordenadora"
                                 class="w-full h-full object-cover">
                         </div>
-                        <h4 class="font-semibold">Maria Santos</h4>
-                        <p class="text-sm text-[#d24d79]">Coord. Pedagógica</p>
+                        <h4 class="font-semibold">Tayná Borges</h4>
+                        <p class="text-sm text-[#f6b620]">Esposa do chefe</p>
                     </div>
                     <div class="aero-card p-6 text-center">
                         <div class="w-24 h-24 mx-auto rounded-full overflow-hidden mb-4 border-4 border-[#3a82bf]">
                             <img src="https://i.pravatar.cc/150?img=3" alt="Maestro" class="w-full h-full object-cover">
                         </div>
-                        <h4 class="font-semibold">João Oliveira</h4>
-                        <p class="text-sm text-[#3a82bf]">Maestro</p>
+                        <h4 class="font-semibold">TIago Vieira</h4>
+                        <p class="text-sm text-[#f6b620]">Primo do chefe</p>
                     </div>
                     <div class="aero-card p-6 text-center">
                         <div class="w-24 h-24 mx-auto rounded-full overflow-hidden mb-4 border-4 border-[#f6b620]">
                             <img src="https://i.pravatar.cc/150?img=9" alt="Diretora Artística"
                                 class="w-full h-full object-cover">
                         </div>
-                        <h4 class="font-semibold">Ana Costa</h4>
-                        <p class="text-sm text-[#f6b620]">Diretora Artística</p>
+                        <h4 class="font-semibold">Isadora Farias</h4>
+                        <p class="text-sm text-[#f6b620]">Cunhada do chefe</p>
                     </div>
                 </div>
             </div>
@@ -1152,11 +1354,11 @@
 
 
         <!-- GALERIA PAGE -->
-        <section id="galeria" class="page min-h-screen">
+        <section id="galeria" class="page active min-h-screen bg-[#ffb700]">
             <div class="container mx-auto px-4 py-36">
                 <h1 class="text-5xl font-bold text-center mb-4">Nossa <span class="text-[#3a82bf]">Galeria</span></h1>
                 <p class="text-xl text-gray-300 text-center mb-12">Momentos especiais capturados em nossos eventos.</p>
-
+                <!-- Filtros da Galeria -->
                 <div class="flex flex-wrap justify-center gap-4 mb-12">
                     <button
                         class="gallery-filter active px-6 py-2 rounded-full bg-[#f6b620] text-black font-medium transition-all"
@@ -1169,7 +1371,7 @@
                     <button class="gallery-filter px-6 py-2 rounded-full glass hover:bg-[#3a82bf] transition-all"
                         data-filter="apresentacoes">Apresentações</button>
                 </div>
-
+                <!-- Fim Filtros da Galeria -->
                 <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" id="gallery-grid">
                     <div class="gallery-item eventos aspect-square rounded-2xl overflow-hidden cursor-pointer group"
                         onclick="openLightbox(this)">
@@ -1221,7 +1423,7 @@
                     </div>
                 </div>
             </div>
-
+            <!-- Lightbox Modal -->
             <div id="lightbox" class="fixed inset-0 bg-black/90 z-50 hidden items-center justify-center p-4"
                 onclick="closeLightbox()">
                 <button class="absolute top-4 right-4 text-white text-4xl">&times;</button>
@@ -1230,14 +1432,13 @@
         </section>
         <!-- Fim GALERIA PAGE -->
 
-
         <!-- CONTRIBUA PAGE -->
-        <section id="contribua" class="page min-h-screen">
+        <section id="contribua" class="page active min-h-screen bg-[#8c475b]">
             <div class="container mx-auto px-4 py-36">
                 <h1 class="text-5xl font-bold text-center mb-4">Como <span class="text-[#f6b620]">Contribuir</span></h1>
                 <p class="text-xl text-gray-300 text-center mb-16">Projeto aprovado pela Lei Rouanet. Sua empresa pode
                     investir em cultura!</p>
-
+                <!-- Projeto Aprovado Card -->
                 <div
                     class="aero-card p-8 mb-12 text-center bg-gradient-to-r from-[#f6b620]/20 via-[#d24d79]/20 to-[#3a82bf]/20">
                     <div class="flex items-center justify-center gap-4 mb-6">
@@ -1249,7 +1450,8 @@
                     </div>
                     <p class="text-gray-300">Pronac: 123456 - "Arte nas Escolas para Todos"</p>
                 </div>
-
+                <!-- Fim Projeto Aprovado Card -->
+                <!-- Opções de Contribuição -->
                 <div class="grid md:grid-cols-3 gap-8">
                     <div class="aero-card p-8 text-center">
                         <div
@@ -1298,6 +1500,7 @@
                             class="w-full py-3 rounded-full gradient-blue text-white font-semibold hover:shadow-lg transition-all">Ser
                             Parceiro</button>
                     </div>
+                    <!-- Fim Opções de Contribuição -->
                 </div>
             </div>
         </section>
@@ -1305,12 +1508,11 @@
 
 
         <!-- CONTATO PAGE -->
-        <section id="contato" class="page min-h-screen">
+        <section id="contato" class="page active min-h-screen bg-[#04618e]">
             <div class="container mx-auto px-4 py-36">
                 <h1 class="text-5xl font-bold text-center mb-4">Entre em <span class="text-[#d24d79]">Contato</span>
                 </h1>
                 <p class="text-xl text-gray-300 text-center mb-16">Estamos aqui para ajudar!</p>
-
 
                 <!-- FORMULÁRIO DE CONTATO -->
                 <div class="grid lg:grid-cols-2 gap-12">
@@ -1375,7 +1577,7 @@
                             </div>
                         </div>
                     </div>
-
+                    <!-- Fim Modal de Sucesso -->
                     <div class="space-y-6">
                         <div class="aero-card p-6 flex items-center gap-4">
                             <div
@@ -1418,14 +1620,17 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Fim Contato Informações -->
                 </div>
+                <!-- Fim FORMULÁRIO DE CONTATO -->
             </div>
+            <!-- Fim CONTATO PAGE -->
         </section>
         <!-- Fim CONTATO PAGE -->
 
 
         <!-- AGENDAMENTO PAGE -->
-        <section id="agendamento" class="page min-h-screen">
+        <section id="agendamento" class="page active min-h-screen bg-[#730217]">
             <div class="container mx-auto px-4 py-36">
                 <div id="login-section">
                     <h1 class="text-5xl font-bold text-center mb-4">Sistema de <span
@@ -1459,6 +1664,7 @@
                     </div>
                 </div>
                 <!-- Fim LOGIN SECTION -->
+                <!-- Calendario SECTION -->
                 <div id="scheduling-section" class="hidden">
                     <div class="flex items-center justify-between mb-8">
                         <div>
@@ -1568,11 +1774,10 @@
 
 
         <!-- MATRÍCULA PAGE -->
-        <section id="matricula" class="page min-h-screen">
+        <section id="matricula" class="page active min-h-screen bg-[#22223B]">
             <div class="container mx-auto px-4 py-36">
                 <h1 class="text-5xl font-bold text-center mb-4"><span class="text-[#d24d79]">Matricule-se</span></h1>
                 <p class="text-xl text-gray-300 text-center mb-12">Inicie sua jornada artística conosco!</p>
-
 
                 <!-- FORMULÁRIO DE MATRÍCULA -->
                 <div class="max-w-3xl mx-auto aero-card p-8">
@@ -1760,7 +1965,7 @@
 
 
         <!-- ACESSO RESTRITO PAGE -->
-        <section id="acesso-restrito" class="page min-h-screen">
+        <section id="acesso-restrito" class="page active min-h-screen bg-[#193455]">
             <div class="container mx-auto px-4 py-36">
                 <div id="admin-login">
                     <h1 class="text-5xl font-bold text-center mb-4">Acesso <span class="text-[#d24d79]">Restrito</span>
@@ -1911,20 +2116,25 @@
                                             Box 3</button>
                                     </div>
                                 </div>
+                                <!-- Fim Box 3 -->
                             </div>
+                            <!-- Fim Gerenciar Quadro de Avisos -->
                         </div>
+                        <!-- Fim Gerenciar Quadro de Avisos -->
                     </div>
                     <!-- Fim ADMIN CONTENT -->
+                    <!-- Imagens da Galeria -->
                     <div class="mt-8 aero-card p-6">
                         <h3 class="text-xl font-semibold mb-4">Imagens da Galeria</h3>
                         <div id="uploaded-images" class="grid grid-cols-4 gap-4">
                             <p class="text-gray-400 col-span-full">Nenhuma imagem na galeria.</p>
                         </div>
+                        <!-- Fim Imagens da Galeria -->
                     </div>
                 </div>
             </div>
         </section>
-
+        <!-- Fim ACESSO RESTRITO PAGE -->
     </main>
     <!-- Fim MAIN CONTENT -->
 
@@ -1999,7 +2209,7 @@
                 navigateTo(link.dataset.page);
             });
         });
-
+        // menu mobile
         function toggleMobileMenu() {
             document.querySelector('.mobile-menu').classList.toggle('open');
         }
@@ -2016,7 +2226,7 @@
             slides.forEach((s, i) => s.style.opacity = i === index ? '1' : '0');
             dots.forEach((d, i) => d.style.background = i === index ? '#f6b620' : 'rgba(255,255,255,0.5)');
         }
-
+        // troca automática de slides
         function changeSlide(dir) { showSlide(currentSlide + dir); }
 
         dots.forEach((dot, i) => dot.addEventListener('click', () => showSlide(i)));
@@ -2061,7 +2271,7 @@
                 typeIndex = (typeIndex + 1) % typeTexts.length;
                 speed = 500;
             }
-
+            // continua a animação
             setTimeout(typeWriter, speed);
         }
         typeWriter();
@@ -2082,7 +2292,7 @@
                 });
             });
         });
-
+        // lightbox
         function openLightbox(el) {
             document.getElementById('lightbox-img').src = el.querySelector('img').src;
             document.getElementById('lightbox').classList.remove('hidden');
@@ -2120,14 +2330,14 @@
                 alert('Credenciais inválidas!');
             }
         });
-
+        // logout
         function logout() {
             document.getElementById('login-section').classList.remove('hidden');
             document.getElementById('scheduling-section').classList.add('hidden');
             document.getElementById('login-username').value = '';
             document.getElementById('login-password').value = '';
         }
-
+        // renderiza o calendário
         function renderCalendar() {
             const months = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
             document.getElementById('current-month').textContent = `${months[currentDate.getMonth()]} ${currentDate.getFullYear()}`;
@@ -2288,7 +2498,7 @@
 
             document.getElementById('my-bookings').innerHTML = html;
         }
-
+        // cancelar reserva
         function cancelBooking(index) {
             bookings.splice(index, 1);
             localStorage.setItem('bookings', JSON.stringify(bookings));
@@ -2437,7 +2647,7 @@
                 container.innerHTML = '<p class="text-gray-400 col-span-full">Nenhuma imagem enviada para a galeria.</p>';
                 return;
             }
-
+            // Renderiza todas as imagens com botão de exclusão
             let html = '';
             allImages.forEach(img => {
                 html += `
